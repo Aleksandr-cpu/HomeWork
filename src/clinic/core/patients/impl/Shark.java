@@ -15,9 +15,6 @@ public class Shark extends Animal {
     public Shark() {
     }
 
-
-
-
     @Override
     public void toFly() {
         System.out.println("Акула не летает");
