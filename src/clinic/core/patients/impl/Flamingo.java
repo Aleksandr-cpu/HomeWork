@@ -1,8 +1,13 @@
-package main.clients;
+package clinic.core.patients.impl;
+
+import clinic.core.Illness.Illness;
+import clinic.core.clients.Owner;
+import clinic.core.patients.Animal;
 
 import java.time.LocalDate;
 
-public class Flamingo extends Animal{
+public class Flamingo extends Animal {
+
     public Flamingo(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         super(nickName, owner, birthDate, illness);
     }
@@ -10,22 +15,34 @@ public class Flamingo extends Animal{
     public Flamingo() {
     }
 
+
+    @Override
+    public void toFly() {
+        System.out.println("Фламинго бегает");
+    }
+
+    @Override
+    public double fly() {
+        return 22;
+    }
+
     @Override
     public void toGo() {
-        System.out.println(getType() + " бегает");
+        System.out.println("Фламинго бегает");
     }
 
     @Override
-    public void fly() {
-        System.out.println(getType() + " летает");
+    public double run() {
+        return 0;
     }
 
     @Override
-    public void swim() {
-        System.out.println(getType() + " не плавает");
+    public void toSwim() {
+        System.out.println("Фламинго не плавает");
     }
+
     @Override
-    public void eat() {
-        System.out.println("Фламинго поймала мышку и ест");
+    public double swim() {
+        return 0;
     }
 }
